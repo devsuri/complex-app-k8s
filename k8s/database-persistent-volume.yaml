@@ -7,9 +7,24 @@ metadata:
 spec:
   capacity:
     storage: 2Gi
-  volumeMode: Filesystem
-  storageClassName: local-storage
   accessModes:
     - ReadWriteOnce
   local:
-    path: /mnt/data
+    path: "/tmp/data01"
+
+
+
+#kind: PersistentVolume
+#apiVersion: v1
+#metadata:
+#   name: pv0001
+#   labels:
+#      type: local
+#spec:
+#   capacity:
+#      storage: 10Gi
+#   accessModes:
+#      - ReadWriteOnce
+#   hostPath:
+#        path: "/tmp/data01"
+
